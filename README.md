@@ -1,6 +1,6 @@
 # DesafioCRUD
 
-##Desafio de CRUD em PHP
+## Desafio de CRUD em PHP
 
 **Objetivo:**
 
@@ -10,7 +10,7 @@ Desenvolver um sistema simples de cadastro de clientes em PHP, com funcionalidad
   
 Este desafio é uma etapa crucial para a integração do desenvolvedor na stack tecnológica da empresa. Ele visa avaliar sua habilidade em implementar um CRUD básico, o entendimento das relações entre entidades, e a capacidade de trabalhar com PHP e bancos de dados. Além disso, a criação deste CRUD ajudará o desenvolvedor a se familiarizar com a estrutura e práticas usadas no desenvolvimento de aplicações na empresa.
 
-###Estrutura das Entidades
+### Estrutura das Entidades
 **Entidade Cliente**
 
 *id: Identificador único do cliente (auto incremento)
@@ -27,25 +27,28 @@ Este desafio é uma etapa crucial para a integração do desenvolvedor na stack 
 *alterado_em: Data e hora da última atualização (DATETIME)
 *status: Status do cliente (ENUM, valores: 'ativo', 'inativo', para soft delete)
 
-Entidade Endereços
-id: Identificador único do endereço (auto incremento)
-cliente_id: Relaciona o endereço com um cliente (INT, chave estrangeira)
-logradouro: Nome da rua, avenida, etc. (VARCHAR)
-numero: Número do imóvel (VARCHAR)
-bairro: Bairro (VARCHAR)
-cidade: Cidade (VARCHAR)
-estado: Estado (VARCHAR)
-cep: Código Postal (VARCHAR)
-principal: Indica se o endereço é o principal (BOOLEAN)
-Regras
-Relacionamento entre Cliente e Endereço:
-Um cliente pode ter múltiplos endereços.
-Deve haver um único endereço marcado como principal para cada cliente.
-Operações CRUD:
-Criar: Adicionar um novo cliente e seus endereços.
-Ler: Listar clientes e seus endereços. Deve ser possível ver todos os endereços de um cliente específico.
-Atualizar: Editar as informações de um cliente e atualizar endereços associados. Um cliente pode ter seus endereços atualizados, incluindo a marcação de um novo endereço como principal.
-Remover (Soft Delete): Desativar um cliente sem removê-lo fisicamente do banco de dados. Isso deve ser feito alterando o campo status para inativo. A exclusão de endereços também deve seguir a lógica de soft delete.
+**Entidade Endereços**
+*id: Identificador único do endereço (auto incremento)
+*cliente_id: Relaciona o endereço com um cliente (INT, chave estrangeira)
+*logradouro: Nome da rua, avenida, etc. (VARCHAR)
+*numero: Número do imóvel (VARCHAR)
+*bairro: Bairro (VARCHAR)
+*cidade: Cidade (VARCHAR)
+*estado: Estado (VARCHAR)
+*cep: Código Postal (VARCHAR)
+*principal: Indica se o endereço é o principal (BOOLEAN)
+
+### Regras:
+**1. Relacionamento entre Cliente e Endereço:**
+- Um cliente pode ter múltiplos endereços.
+- Deve haver um único endereço marcado como principal para cada cliente.
+
+**2.Operações CRUD: **
+- Criar: Adicionar um novo cliente e seus endereços.
+- Ler: Listar clientes e seus endereços. Deve ser possível ver todos os endereços de um cliente específico.
+- Atualizar: Editar as informações de um cliente e atualizar endereços associados. Um cliente pode ter seus endereços atualizados, incluindo a marcação de um novo endereço como principal.
+- Remover (Soft Delete): Desativar um cliente sem removê-lo fisicamente do banco de dados. Isso deve ser feito alterando o campo status para inativo. A exclusão de endereços também deve seguir a lógica de soft delete.
+
 Regras Específicas para Endereços:
 Não é permitido apagar um endereço que esteja marcado como principal. Para remover um endereço principal, você deve primeiro transformar outro endereço vinculado ao cliente em principal.
 Um cliente deve sempre ter pelo menos um endereço vinculado. Não é permitido remover todos os endereços de um cliente. Caso seja necessário remover um endereço, um novo endereço deve ser definido como principal antes da remoção.
