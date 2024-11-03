@@ -77,9 +77,9 @@ Exemplo para desenvolvedor chamado "joao":
   - Exemplos de como utilizar cada funcionalidade (criar, ler, atualizar, remover).
   - Considerações sobre segurança e boas práticas aplicadas.
 ### Instruções Adicionais
-**1. Validação: Inclui validação básica dos dados de entrada**
-**2. Segurança: Utilize práticas seguras de programação, como prepared statements, para evitar SQL injection**
-**3. Organização do Código: Separe as responsabilidades de cada função e mantenha o código organizado e indentado, seguindo boas práticas de desenvolvimento**
+**- Validação: Inclui validação básica dos dados de entrada**
+**- Segurança: Utilize práticas seguras de programação, como prepared statements, para evitar SQL injection**
+**- Organização do Código: Separe as responsabilidades de cada função e mantenha o código organizado e indentado, seguindo boas práticas de desenvolvimento**
 
 ### Passo a Passo Adicional
 -  Menu de Navegação: Crie um link no menu lateral da aplicação para acessar o CRUD de clientes. Certifique-se de que este link esteja visível e acessível de forma intuitiva para facilitar a navegação.
