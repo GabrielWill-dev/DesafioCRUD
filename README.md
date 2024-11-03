@@ -7,6 +7,7 @@ Objetivo:
 Desenvolver um sistema simples de cadastro de clientes em PHP, com funcionalidades de criar, ler, atualizar e remover registros (soft delete). Cada cliente pode ter múltiplos endereços, sendo que um endereço deve ser marcado como principal. As tabelas no banco de dados devem ser estruturadas seguindo boas práticas e com uma tipagem coerente. Além disso, o código deve ser organizado, com as responsabilidades de cada função bem separadas e a indentação seguindo boas práticas de desenvolvimento.
 
 <h3 Importância do Desafio: </h3>
+  
 Este desafio é uma etapa crucial para a integração do desenvolvedor na stack tecnológica da empresa. Ele visa avaliar sua habilidade em implementar um CRUD básico, o entendimento das relações entre entidades, e a capacidade de trabalhar com PHP e bancos de dados. Além disso, a criação deste CRUD ajudará o desenvolvedor a se familiarizar com a estrutura e práticas usadas no desenvolvimento de aplicações na empresa.
 Estrutura das Entidades
 Entidade Cliente
