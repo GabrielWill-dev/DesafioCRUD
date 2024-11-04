@@ -24,10 +24,10 @@ Este desafio é uma etapa crucial para a integração do desenvolvedor na stack 
 * criado_em: Data e hora em que o cliente foi cadastrado (DATETIME)
 * alterado_em: Data e hora da última atualização (DATETIME)
 * status: Status do cliente (ENUM, valores: 'ativo', 'inativo', para soft delete)
+* endereco_id: Relaciona o cliente com um endereco (INT, chave estrangeira)
 
 **Entidade Endereços**
 * id: Identificador único do endereço (auto incremento)
-* cliente_id: Relaciona o endereço com um cliente (INT, chave estrangeira)
 * logradouro: Nome da rua, avenida, etc. (VARCHAR)
 * numero: Número do imóvel (VARCHAR)
 * bairro: Bairro (VARCHAR)
