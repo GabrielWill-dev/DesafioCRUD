@@ -86,12 +86,45 @@ class Router{
     }
 
     /**
+     * Método responsável por retornar a URI desconsiderando o prefixo
+     * @return string
+     */
+    private function getUri(){
+        //URI DA REQUEST
+        $uri = $this->resquest->getUri();
+
+        //FATIA A URI COM PREFIXO
+        $xUri = strlen($this->prefix) ? explode($this->prefix,$uri) : [$uri];
+
+        //RETORNA A URI SEM PREFIXO
+        return end($Xuri);
+    }
+
+    /**
+     *Método responsável por retornar os da rota atual
+     * @return void
+     */
+    private function getRoute(){
+
+        //URI
+        $uri = $this->getUri();
+
+        //METHOD
+        $httpMethod = $this->request->getHttpMetodo();
+
+        //VALIDA AS ROTAS
+        foreach($this->$routes as $patternRoute=>$methods){
+
+        }
+    }
+
+    /**
      * Método responsável por executar a rota atual
      * @return Response
      */
     public function run(){
         try{
-            throw new Exception("Página não encontrada", 404);
+            $route = $this->getRoute();
             
         }catch(Exception $e){
             return new Response($e->getCode(),$e->getMessage());
